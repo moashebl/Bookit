@@ -328,4 +328,3 @@ Once the backend is live, update the Vercel frontend `NEXT_PUBLIC_API_URL` to po
 
 ---
 
-## 📄 License
