@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "prebuild": "cd ../../packages/shared && npm run build",
     "dev": "next dev --port 3000",
     "build": "next build",
     "start": "next start",
