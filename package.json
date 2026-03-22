@@ -1,0 +1,22 @@
+{
+  "name": "bookit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BookIt - Full-Stack Booking System",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter @bookit/api dev\" \"pnpm --filter @bookit/web dev\"",
+    "dev:api": "pnpm --filter @bookit/api dev",
+    "dev:web": "pnpm --filter @bookit/web dev",
+    "build": "pnpm --filter @bookit/shared build && pnpm --filter @bookit/api build && pnpm --filter @bookit/web build",
+    "build:shared": "pnpm --filter @bookit/shared build",
+    "test": "pnpm --filter @bookit/api test",
+    "db:generate": "pnpm --filter @bookit/api db:generate",
+    "db:migrate": "pnpm --filter @bookit/api db:migrate",
+    "db:seed": "pnpm --filter @bookit/api db:seed",
+    "lint": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}
