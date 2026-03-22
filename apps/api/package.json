@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "cd ../../packages/shared && npm run build",
-    "build": "nest build",
+    "build": "pnpm --filter @bookit/shared build && nest build",
     "dev": "nest start --watch",
     "start": "nest start",
     "start:dev": "nest start --watch",

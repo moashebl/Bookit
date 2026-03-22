@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "cd ../../packages/shared && npm run build",
     "dev": "next dev --port 3000",
-    "build": "next build",
+    "build": "pnpm --filter @bookit/shared build && next build",
     "start": "next start",
     "lint": "next lint"
   },
