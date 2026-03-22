@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alex Carter - BookIt Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#e1e2e4",
+              "on-error-container": "#93000a",
+              "surface-tint": "#465f88",
+              "surface-variant": "#e3e2e6",
+              "surface-container-low": "#f4f3f7",
+              "on-surface-variant": "#44474e",
+              "background": "#faf9fd",
+              "on-primary-fixed-variant": "#2d476f",
+              "secondary-container": "#dee0e2",
+              "primary": "#000a1e",
+              "primary-fixed": "#d6e3ff",
+              "outline": "#74777f",
+              "secondary-fixed-dim": "#c5c6c8",
+              "tertiary-fixed-dim": "#4edea3",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#000d06",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#606365",
+              "tertiary-container": "#002718",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#6ffbbe",
+              "on-secondary-fixed": "#191c1e",
+              "primary-fixed-dim": "#aec7f6",
+              "surface-container-highest": "#e3e2e6",
+              "on-tertiary-fixed-variant": "#005236",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#002113",
+              "on-tertiary-container": "#009c6b",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e9e7eb",
+              "on-surface": "#1a1b1e",
+              "primary-container": "#002147",
+              "on-primary-fixed": "#001b3d",
+              "on-background": "#1a1b1e",
+              "surface": "#faf9fd",
+              "inverse-on-surface": "#f1f0f4",
+              "secondary": "#5c5f60",
+              "on-primary-container": "#708ab5",
+              "outline-variant": "#c4c6cf",
+              "surface-dim": "#dad9dd",
+              "on-secondary-fixed-variant": "#444749",
+              "on-error": "#ffffff",
+              "surface-bright": "#faf9fd",
+              "on-tertiary": "#ffffff",
+              "inverse-primary": "#aec7f6",
+              "surface-container": "#efedf1",
+              "inverse-surface": "#2f3033"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-[#faf9fd] dark:bg-slate-950 flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto sticky top-0 z-50">
+<div class="text-xl font-bold tracking-tighter text-[#002147] dark:text-white">BookIt</div>
+<div class="hidden md:flex items-center space-x-8 font-['Inter'] font-medium tracking-tight text-sm">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#002147] transition-colors duration-200" href="#">Schedule</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#002147] transition-colors duration-200" href="#">Bookings</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#002147] transition-colors duration-200" href="#">Availability</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#002147] transition-colors duration-200" href="#">Analytics</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 active:scale-95 transition-all">Share Link</button>
+<img alt="User profile avatar" class="w-10 h-10 rounded-lg object-cover" data-alt="Professional profile headshot of a designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy5MreM03w43s5K2RAAUAzH4qiFyGJj3I_ZS6I-IoYEiWccjHarI-53AjQzG9Dt9wQq03bKRpB_VPfbfikgT88EmgjShJUQKQDfFkkOQNrvONVx-dXiOKDt19_oR1HzW3ILbRRaGaiSaNXaRXobV-lM7ROCK3zAKxvgYPfOysR5rB-JKgQYLwVWxfYgZKdKvfy8Y2zP3nSMWTXHptFJBTX7cLbeZYveqOguUB-KoiXQGGnrtRCrC5YRlx9N3t4lk7PXH7bTdyLYg"/>
+</div>
+</nav>
+<div class="flex flex-1 max-w-7xl mx-auto w-full">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-full w-64 p-4 space-y-2 bg-[#efedf1] dark:bg-slate-900 sticky top-20 self-start rounded-r-3xl">
+<div class="px-4 py-6 mb-4">
+<div class="text-lg font-black text-[#002147] dark:text-white">BookIt</div>
+<div class="text-xs text-secondary font-medium uppercase tracking-widest opacity-70">The Precision Architect</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:bg-white/50 dark:hover:bg-slate-800/50 rounded-lg transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Inter'] font-semibold text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:bg-white/50 dark:hover:bg-slate-800/50 rounded-lg transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Inter'] font-semibold text-sm">Calendar</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:bg-white/50 dark:hover:bg-slate-800/50 rounded-lg transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Inter'] font-semibold text-sm">Clients</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-white dark:bg-slate-800 text-[#002147] dark:text-white shadow-sm rounded-lg transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] font-semibold text-sm">Settings</span>
+</a>
+</nav>
+<button class="mt-8 mx-2 bg-primary-container text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-primary-container/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span> New Event
+            </button>
+<div class="pt-8 mt-auto border-t border-outline-variant/10 space-y-1">
+<a class="flex items-center gap-3 p-3 text-slate-500 hover:bg-white/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-['Inter'] font-semibold text-sm">Help</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 hover:bg-white/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-['Inter'] font-semibold text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-8 md:p-12 lg:p-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left Column: Profile -->
+<section class="lg:col-span-5 space-y-8">
+<div class="relative w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+<img alt="Alex Carter Profile" class="w-full h-full object-cover" data-alt="Portrait of Alex Carter, a senior product designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc-wNDBAh0042iYNIBujRess92P8u_JoGXaR31fQGYnHMlTyctiq9aIfwuJZKxTDQXq6evWeX4pEWQJTPA6vPaxD2C04KBsbFUlvjVa_65hvrafFyyWw3j6sqae53OKIoqxJzPDEE398HXEohRiPb6wv1_gFikx61AsR_jjOs3r2Rfd3hmjWxt5qeixDGIxEiDMqbx0XCS3ruliqp5Iw9NdF2CL9gpDs-zZxDfPv9gvqq0vevHJteO7Lfg8_5uhOBRD-bSpVCYGA"/>
+</div>
+<div class="space-y-4">
+<h1 class="text-4xl lg:text-5xl font-black tracking-tighter text-primary">Alex Carter</h1>
+<p class="text-xl font-semibold text-on-primary-container">Senior Product Designer</p>
+<p class="text-secondary leading-relaxed text-lg max-w-md">
+                            Passionate about building intuitive digital experiences and mentoring early-career designers. Specializing in high-end editorial interfaces and precision systems.
+                        </p>
+</div>
+<div class="flex items-center gap-6">
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+</section>
+<!-- Right Column: Booking Widget -->
+<section class="lg:col-span-7 bg-surface-container-lowest rounded-[2rem] p-8 lg:p-10 shadow-[0_24px_64px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="space-y-10">
+<!-- Calendar Section -->
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold text-primary">Select a Date</h2>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-y-4 text-center">
+<!-- Day Labels -->
+<div class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-50">Sun</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-50">Mon</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-50">Tue</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-50">Wed</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-50">Thu</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-50">Fri</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-50">Sat</div>
+<!-- Calendar Dates -->
+<div class="p-3 text-sm text-secondary/30">28</div>
+<div class="p-3 text-sm text-secondary/30">29</div>
+<div class="p-3 text-sm text-secondary/30">30</div>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">1</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">2</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">3</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">4</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">5</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">6</button>
+<button class="p-3 text-sm font-semibold bg-primary-container text-white rounded-full relative shadow-lg shadow-primary-container/30">7</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">
+                                    8<span class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-tertiary-fixed-dim rounded-full"></span>
+</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">9</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">
+                                    10<span class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-tertiary-fixed-dim rounded-full"></span>
+</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">11</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">12</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">13</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">14</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">15</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">16</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">17</button>
+<button class="p-3 text-sm font-semibold hover:bg-surface-container rounded-full relative transition-colors">18</button>
+</div>
+</div>
+<!-- Available Slots Section -->
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-primary">Available Slots</h3>
+<span class="text-xs font-bold text-on-primary-container bg-primary-fixed px-3 py-1 rounded-full uppercase tracking-widest">Oct 7</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<button class="group p-4 bg-surface-container-low border border-transparent hover:border-primary-container rounded-xl transition-all duration-200 text-center">
+<span class="block text-sm font-bold text-primary group-hover:text-primary-container">10:00 AM</span>
+<span class="text-[10px] text-secondary">60 min</span>
+</button>
+<button class="group p-4 bg-primary-container border border-primary-container rounded-xl transition-all duration-200 text-center shadow-lg shadow-primary-container/20">
+<span class="block text-sm font-bold text-white">11:00 AM</span>
+<span class="text-[10px] text-primary-fixed opacity-70">60 min</span>
+</button>
+<button class="group p-4 bg-surface-container-low border border-transparent hover:border-primary-container rounded-xl transition-all duration-200 text-center">
+<span class="block text-sm font-bold text-primary group-hover:text-primary-container">2:00 PM</span>
+<span class="text-[10px] text-secondary">60 min</span>
+</button>
+<button class="group p-4 bg-surface-container-low border border-transparent hover:border-primary-container rounded-xl transition-all duration-200 text-center">
+<span class="block text-sm font-bold text-primary group-hover:text-primary-container">3:00 PM</span>
+<span class="text-[10px] text-secondary">60 min</span>
+</button>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-6">
+<button class="w-full py-5 bg-gradient-to-br from-primary to-primary-container text-white rounded-2xl font-black text-lg tracking-tight hover:shadow-2xl hover:shadow-primary-container/40 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">verified_user</span>
+                                Book Session
+                            </button>
+<p class="text-center mt-4 text-xs text-secondary/60">No payment required until after the session.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 md:hidden bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-12px_40px_rgba(0,0,0,0.06)] rounded-t-3xl">
+<a class="flex flex-col items-center justify-center bg-[#002147] dark:bg-blue-600 text-white rounded-2xl p-2 w-16 h-12 scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Book</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2" href="#">
+<span class="material-symbols-outlined">event_note</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Schedule</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

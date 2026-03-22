@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | BookIt</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#002147",
+              "accent": "#ffde3e",
+              "cream": "#fdfbf7",
+              "outline": "#74777f",
+              "secondary": "#5c5f60",
+              "on-secondary-container": "#606365",
+              "surface-dim": "#dad9dd",
+              "surface-container-highest": "#e3e2e6",
+              "surface-container-high": "#e9e7eb",
+              "inverse-on-surface": "#f1f0f4",
+              "on-primary-container": "#708ab5",
+              "on-surface": "#1a1b1e",
+              "on-primary-fixed-variant": "#2d476f",
+              "on-primary-fixed": "#001b3d",
+              "inverse-surface": "#2f3033",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed": "#002113",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-background": "#002147",
+              "tertiary": "#000d06",
+              "surface": "#fdfbf7",
+              "surface-container": "#efedf1",
+              "primary-container": "#002147",
+              "on-primary": "#ffffff",
+              "tertiary-fixed": "#6ffbbe",
+              "tertiary-container": "#002718",
+              "primary-fixed-dim": "#aec7f6",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#44474e",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#e1e2e4",
+              "surface-tint": "#002147",
+              "inverse-primary": "#aec7f6",
+              "surface-variant": "#e3e2e6",
+              "surface-bright": "#faf9fd",
+              "on-secondary-fixed": "#191c1e",
+              "secondary-fixed-dim": "#c5c6c8",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#009c6b",
+              "surface-container-low": "#f4f3f7",
+              "primary-fixed": "#d6e3ff",
+              "outline-variant": "#c4c6cf",
+              "on-secondary-fixed-variant": "#444749",
+              "secondary-container": "#dee0e2",
+              "tertiary-fixed-dim": "#4edea3",
+              "background": "#fdfbf7",
+              "on-tertiary-fixed-variant": "#005236"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+    </style>
+</head>
+<body class="bg-cream text-primary min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Image Panel -->
+<div class="hidden md:block md:w-1/2 lg:w-3/5 relative overflow-hidden">
+<img alt="Architect working in a bright modern office" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBslcFMjmFAyPQw5XrWcob4Lvpb6x6XDvCmEVjKGekRo2LZwLmKKq7WIO3_zF9DJTZo0XzjYNBRx9PdpteHqtNPunj2mq6QMjqRmPAGCliNmVxWP9Fx8L7lMkbp3E3uxGu9vGOOQ8JIzf5go15iCI-GP_wZJmbvcUywOXqmrSd5Aofv4mZyKjc4uqS40cupBSKs-gg0w3J1WiO9R1O4DlJnaZm1Yk24jTwHYmSq8i_QDMleK3Kkz8knwl_UrUnKklSGLUHJrYN48Q"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute bottom-12 left-12 right-12 text-white">
+<h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">Precision scheduling for visionary architects.</h2>
+<p class="text-lg font-medium text-white/90">Join the world's leading firms in mastering time and design.</p>
+</div>
+</div>
+<!-- Login Panel -->
+<div class="w-full md:w-1/2 lg:w-2/5 flex flex-col justify-center items-center p-8 lg:p-16 overflow-y-auto">
+<div class="w-full max-w-sm">
+<div class="mb-10 text-center md:text-left">
+<div class="inline-flex items-center space-x-2 mb-8">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="architecture">architecture</span>
+</div>
+<span class="text-2xl font-black tracking-tighter text-primary">BookIt</span>
+</div>
+<h1 class="text-3xl font-extrabold tracking-tight text-primary mb-2">Welcome back</h1>
+<p class="text-secondary font-medium text-sm">Log in to manage your precision architectural schedule.</p>
+</div>
+<div class="space-y-6">
+<form class="space-y-5">
+<div>
+<label class="block text-[11px] font-bold tracking-widest uppercase text-secondary mb-1.5 px-0.5" for="email">Email Address</label>
+<input class="w-full px-4 py-3 bg-white border border-outline-variant/50 rounded-lg text-primary placeholder:text-outline-variant focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" id="email" name="email" placeholder="name@company.com" type="email"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1.5 px-0.5">
+<label class="block text-[11px] font-bold tracking-widest uppercase text-secondary" for="password">Password</label>
+<a class="text-xs font-semibold text-primary hover:underline transition-colors" href="#">Forgot?</a>
+</div>
+<input class="w-full px-4 py-3 bg-white border border-outline-variant/50 rounded-lg text-primary placeholder:text-outline-variant focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full py-4 bg-primary hover:bg-primary/90 rounded-full text-white font-bold text-sm tracking-wide shadow-lg hover:shadow-primary/20 active:scale-[0.98] transition-all" type="submit">
+                        Sign In
+                    </button>
+</form>
+<div class="relative py-4">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/30"></div>
+</div>
+<div class="relative flex justify-center text-[10px] uppercase tracking-widest font-bold">
+<span class="bg-cream px-4 text-outline-variant">Or continue with</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center space-x-2 py-3 px-4 bg-white border border-outline-variant/50 hover:bg-cream transition-colors rounded-lg group">
+<img alt="Google Logo" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUtbfK5Q1AbKSPagz1AhFdehCA5-rrNrVu0IK-41jlQDADTAprDEYOpl6QWl-skjtldYHSw0CLZ_d0LEaUYsNR8tcLiMR9tsLSAWD0RmZoF4RTw76l15xnvgBVSHj2MPREo33firO48LG4huandUqywr1NVNjsqDYOL6KpYpoOcxHwOozJDEINcJlr7ZVrQP3cy_fzE6D0kqz_hxNBj0e8CQVby_oKbkyczJaPz-BBa8sDJFfEH0RpsICtlg1kj7CQejOx1PRbUg"/>
+<span class="text-xs font-bold text-primary">Google</span>
+</button>
+<button class="flex items-center justify-center space-x-2 py-3 px-4 bg-white border border-outline-variant/50 hover:bg-cream transition-colors rounded-lg group">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="terminal">terminal</span>
+<span class="text-xs font-bold text-primary">GitHub</span>
+</button>
+</div>
+<div class="pt-6 text-center">
+<p class="text-sm font-medium text-secondary">
+                        New to BookIt? 
+                        <a class="inline-block px-4 py-1.5 ml-1 bg-accent hover:bg-accent/90 text-primary font-bold rounded-full transition-all text-xs" href="#">Sign up</a>
+</p>
+</div>
+</div>
+<footer class="mt-20 flex justify-center md:justify-start space-x-4 text-[10px] font-bold uppercase tracking-widest text-outline-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</footer>
+</div>
+</div>
+</body></html>

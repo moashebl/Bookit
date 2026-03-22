@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#e1e2e4",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#465f88",
+                        "surface-variant": "#e3e2e6",
+                        "surface-container-low": "#f4f3f7",
+                        "on-surface-variant": "#44474e",
+                        "background": "#faf9fd",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "secondary-container": "#dee0e2",
+                        "primary": "#000a1e",
+                        "primary-container": "#002147",
+                        "primary-fixed": "#d6e3ff",
+                        "outline": "#74777f",
+                        "secondary-fixed-dim": "#c5c6c8",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000d06",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#606365",
+                        "tertiary-container": "#002718",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-secondary-fixed": "#191c1e",
+                        "primary-fixed-dim": "#aec7f6",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#002113",
+                        "on-tertiary-container": "#009c6b",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e9e7eb",
+                        "on-surface": "#1a1b1e",
+                        "on-primary-fixed": "#001b3d",
+                        "on-background": "#1a1b1e",
+                        "surface": "#faf9fd",
+                        "inverse-on-surface": "#f1f0f4",
+                        "secondary": "#5c5f60",
+                        "on-primary-container": "#708ab5",
+                        "outline-variant": "#c4c6cf",
+                        "surface-dim": "#dad9dd",
+                        "on-secondary-fixed-variant": "#444749",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#faf9fd",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#aec7f6",
+                        "surface-container": "#efedf1",
+                        "inverse-surface": "#2f3033"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-blur-overlay {
+            backdrop-filter: blur(8px);
+            background-color: rgba(26, 27, 30, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased overflow-hidden">
+<!-- Background Content: Profile Page (Blurred) -->
+<div class="min-h-screen flex flex-col md:flex-row blur-[4px] pointer-events-none select-none">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden md:flex flex-col h-screen p-4 space-y-2 bg-[#efedf1] dark:bg-slate-900 text-[#002147] dark:text-blue-400 docked left-0 h-full w-64">
+<div class="flex items-center gap-3 px-3 py-6">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">architecture</span>
+</div>
+<div>
+<h1 class="text-lg font-black text-[#002147] dark:text-white leading-tight">BookIt</h1>
+<p class="text-[10px] font-medium text-secondary tracking-wider">The Precision Architect</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 font-['Inter'] font-semibold text-sm">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 font-['Inter'] font-semibold text-sm">
+<span class="material-symbols-outlined">calendar_today</span>
+<span>Calendar</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 font-['Inter'] font-semibold text-sm">
+<span class="material-symbols-outlined">group</span>
+<span>Clients</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-[#002147] dark:text-white shadow-sm rounded-lg font-['Inter'] font-semibold text-sm">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</div>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto">
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-[#faf9fd] dark:bg-slate-950 text-[#002147] dark:text-blue-400 font-['Inter'] font-medium tracking-tight text-sm flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#002147] dark:text-white">BookIt</span>
+<nav class="hidden md:flex items-center gap-6">
+<span class="text-slate-500">Schedule</span>
+<span class="text-slate-500">Bookings</span>
+<span class="text-slate-500">Availability</span>
+<span class="text-slate-500">Analytics</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 bg-primary-container text-on-primary rounded-lg text-xs font-bold">Share Link</button>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full bg-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBruDxWH79A0Hk5xpi3sPds1MnTqSOP1sVvBikfSwcTf4dHxC_nte_zA-G_mqARTopiqUbbC8RQVsl97ATMwUWOHPSQDU0_SAglRnL90eVzQ6mtAN2MB86KrdLh62HcUBepTLDbmDZaOsPG5mSJ2_roF-IJnmiIRdrRf-r4W90GkSIhQiqGDzvyLYkKv2U16b6S1_1Gr_oShRepR4vnouFbPKu9s64zqwIQFuc3mJRZ5YEDVpnpLbAqJja_e5Sdtomdlii_AZgLQg"/>
+</div>
+</header>
+<div class="max-w-4xl mx-auto p-12">
+<div class="mb-12">
+<h2 class="text-[2.75rem] font-black tracking-tighter leading-none mb-4">User Settings</h2>
+<p class="text-secondary body-md">Manage your professional profile and availability preferences.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 space-y-8">
+<section class="bg-surface-container-lowest p-8 rounded-xl">
+<h3 class="headline-sm font-bold mb-6">Profile Information</h3>
+<div class="space-y-4">
+<div class="h-12 bg-surface-container rounded-lg w-full"></div>
+<div class="h-12 bg-surface-container rounded-lg w-full"></div>
+<div class="h-32 bg-surface-container rounded-lg w-full"></div>
+</div>
+</section>
+</div>
+<div class="space-y-8">
+<section class="bg-surface-container-lowest p-6 rounded-xl">
+<h3 class="text-sm font-bold uppercase tracking-widest text-secondary mb-4">Account Status</h3>
+<div class="h-24 bg-surface-container rounded-lg w-full"></div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-blur-overlay">
+<!-- Confirmation Modal -->
+<div class="bg-surface-container-lowest w-full max-w-md rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col items-center text-center p-10 relative">
+<!-- Success Icon -->
+<div class="mb-8 flex items-center justify-center w-20 h-20 bg-tertiary-fixed-dim/20 rounded-full">
+<span class="material-symbols-outlined text-[48px] text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Content -->
+<div class="space-y-6 mb-10">
+<div>
+<h2 class="text-3xl font-black tracking-tighter text-primary mb-2">Booking Confirmed!</h2>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-surface-container text-on-surface-variant rounded-full text-sm font-semibold">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                        Thursday, October 12th at 2:00 PM
+                    </div>
+</div>
+<p class="text-secondary text-sm leading-relaxed px-4">
+                    You'll receive a calendar invitation shortly with all the session details.
+                </p>
+</div>
+<!-- Action Button -->
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-lg font-bold text-sm tracking-tight shadow-lg shadow-primary/10 active:scale-95 transition-all duration-150">
+                Done
+            </button>
+<!-- Decorative Precision Element -->
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-tertiary-fixed-dim via-primary-container to-tertiary-fixed-dim"></div>
+</div>
+</div>
+<!-- BottomNavBar (Shared Component - Hidden on Desktop) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 md:hidden bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-12px_40px_rgba(0,0,0,0.06)] rounded-t-3xl">
+<div class="flex flex-col items-center justify-center text-slate-400 p-2">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 p-2">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Book</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 p-2">
+<span class="material-symbols-outlined">event_note</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Schedule</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#002147] dark:bg-blue-600 text-white rounded-2xl p-2 w-16 h-12">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-0.5">Profile</span>
+</div>
+</nav>
+</body></html>
